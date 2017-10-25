@@ -2,7 +2,7 @@
 import { Selector, ClientFunction } from 'testcafe';
 
 fixture `Resumes Overview`
-  .page `http://localhost:9080/#/`;
+  .page `http://localhost:8181/#/`;
 
 
 test('Resumes overview appears', async t => {

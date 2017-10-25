@@ -2,7 +2,7 @@
 import { Selector, ClientFunction } from 'testcafe';
 
 fixture `Resumes`
-  .page `http://localhost:9080/#/`;
+  .page `http://localhost:8181/#/`;
 
 let resumes;
 
@@ -23,7 +23,7 @@ test('Click on resume should open preview', async t => {
   for(const resume of r) {
     const s = '.page#' + resume;
     await t
-    .navigateTo('http://localhost:9080/#/resume/' + resume)
+    .navigateTo('http://localhost:8181/#/resume/' + resume)
     .expect(Selector(s)).ok()
     .expect(Selector(s + ' *').withText('John Doe')).ok();
   }
